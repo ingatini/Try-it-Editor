@@ -1,0 +1,87 @@
+<style type="text/css">
+body {
+margin: 0;
+padding: 0;
+}
+textarea {
+font-family: calibri, verdana, ms sans serif;
+font-size: 11pt;
+}
+.maintable {
+width: 100%;
+background-color: #e5eecc;
+color: #000;
+border:solid #c3c3c3 1px;
+margin-left: 0px;
+border-spacing: 9px 3px;
+padding: 3px;
+}
+.code_input, .result_output {
+border: 1px solid #c3c3c3;
+width: 100%;
+height: 400px;
+background-color: #ffffff;
+color: #000;
+}
+</style> <table class="maintable"><tbody>
+<tr><td align="right"><input name="submit" onclick="display()" type="submit" value="Submit Code »" /> <input name="submit" onclick="open_new()" type="submit" value="Clear" /></td><td align="left"><div style="color: #617f10; font-family: verdana; font-size: 90%;">
+Result:</div>
+</td></tr>
+<tr><td style="width: 50%;"><textarea class="code_input" cols="42" id="code" rows="21" wrap="logical"><!DOCTYPE html>
+<html>
+<head>
+<style>
+p {padding:4px;}
+p.dotted {border-style: dotted;border-color:red;}
+p.dashed {border-style: dashed;border-color:blue;}
+p.solid {border-style: solid;border-color:green;}
+p.double {border-style: double;border-color:yellow;}
+p.groove {border-style: groove;border-color:violet;}
+p.ridge {border-style: ridge;border-color:red;}
+p.inset {border-style: inset;border-color:blue;}
+p.outset {border-style: outset;border-color:green;}
+p.none {border-style: none;border-color:yellow;}
+p.hidden {border-style: hidden;border-color:violet;}
+p.mix {border-style: dotted solid dashed double;}
+</style>
+</head>
+<body>
+
+<h2>Macam - macam Border Keren</h2>
+<p>Jenis Border ini menentukan style atau gaya yang akan ditampilkan:</p>
+
+<p class="dotted">Gaya dotted</p>
+<p class="dashed">Gaya dashed</p>
+<p class="solid">Gaya solid</p>
+<p class="double">Gaya double</p>
+<p class="groove">Gaya groove</p>
+<p class="ridge">Gaya ridge</p>
+<p class="inset">Gaya inset</p>
+<p class="outset">Gaya outset</p>
+<p class="none">Tidak ada</p>
+<p class="hidden">Gaya hidden atau disembunyikan</p>
+<p class="mix">Gaya mixed</p>
+
+</body>
+</html></textarea></td><td style="width: 50%;"><iframe class="result_output" frameborder="0" name="view" src="about:Blank"></iframe></td></tr>
+<tr><td><div style="color: #617f10; font-family: verdana; font-size: 90%;">
+Edit the code above and click "Submit Code" to see the result.</div>
+</td> <td align="right"><div style="color: #617f10; font-family: verdana; font-size: 90%;">
+<a href="https://ingatcaraini.blogspot.com/" title="Cara mudah bagi kalian menemukan jalan pintas menghadapi masalah teknologi">Ingat Cara Ini</a>- TryIt your self</div>
+</td></tr>
+</tbody></table>
+<script type="text/javascript">
+function display() {
+var result = window.open('about:Blank','view','');
+var tmp = result.document;
+tmp.write(document.getElementById('code').value);
+tmp.close();
+return false;
+}
+{display()}
+function open_new() {
+document.getElementById('code').value = '';
+display()
+return false;
+}
+</script>
